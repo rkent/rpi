@@ -1,0 +1,8 @@
+# adapted from https://dev.to/ifenna__/adding-colors-to-bash-scripts-48g4
+BOLDRED="\e[1;31m"
+BOLDYELLOW="\e[01;33m"
+ENDCOLOR="\e[0m"
+PS1="${BOLDRED}${debian_chroot:+($debian_chroot)}\u@${BOLDYELLOW}\h:${BOLDRED}\w $ ${ENDCOLOR}"
+
+export LS_OPTS='--color=auto'
+alias ls='ls ${LS_OPTS}'
